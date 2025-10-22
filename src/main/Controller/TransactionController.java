@@ -1,5 +1,10 @@
-@RequestController
+import lombok.NoArgsConstructor;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RestController
 @RequestMapping("/api/transactions")
+@NoArgsConstructor
 public class TransactionController {
 
 //     1. (GET - "/api/transactions”) - Get All Transaction history.
@@ -11,7 +16,7 @@ public class TransactionController {
 // 4. (DELETE - "/api/transactions/{id}”) - Delete a specific Transaction.
 
 // 5. (POST - "/api/transactions") - Add a new transaction.
-
+final TransactionService transactionService;
 public  ResponseEntity<List<Transaction>> getAllTransactions() {
 
 
