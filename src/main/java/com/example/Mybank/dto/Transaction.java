@@ -1,3 +1,4 @@
+package com.example.Mybank.dto;
 import org.springframework.stereotype.Component;
 
 import lombok.Data;
